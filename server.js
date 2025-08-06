@@ -1,9 +1,11 @@
+require('dotenv').config();
 const express = require('express')
 const cors = require('cors')
 const axios = require('axios')
 
-const kakaoClientId = '4210aaee52831dbcb7127d51bce131d2'
-const redirectURI = 'http://127.0.0.1:5500/제출과제/OAuth/index.html'
+const kakaoClientId = process.env.KAKAO_CLIENT_ID;
+const redirectURI = process.env.KAKAO_REDIRECT_URI;
+
 
 const app = express()
 
